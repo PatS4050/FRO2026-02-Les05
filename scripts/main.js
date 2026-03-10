@@ -72,3 +72,19 @@ const departments = {
 }
 
 console.log(departments);
+
+const employeesSales = departments.sales.numberOfEmployees;
+console.log("Sales heeft " + employeesSales + " medewerkers.");
+
+const descriptionMarketing = departments.marketing.description;
+console.log("Marketing is een leuke afdeling om te werken. " + descriptionMarketing);
+
+const employeeCS = departments["customer-service"].numberOfEmployees;
+console.log("Customer Services heeft " + employeeCS + " medewerkers.");
+
+const descriptionSalesManager = departments.marketing.jobs[1].description;
+console.log("Sales is een uitdagende afdeling om te werken als Verkoopmanager." + descriptionSalesManager);
+
+const userInput = prompt('Over welke afdeling wil je meer informatie? Kies uit [marketing / sales / customer-service]');
+console.log(userInput);
+

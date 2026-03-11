@@ -88,3 +88,17 @@ console.log("Sales is een uitdagende afdeling om te werken als Verkoopmanager." 
 const userInput = prompt('Over welke afdeling wil je meer informatie? Kies uit [marketing / sales / customer-service]');
 console.log(userInput);
 
+const descriptionCustomerService = departments['customer-service'].description;
+const descriptionSales = departments.sales.description;
+
+
+if (userInput === "marketing") {
+    console.log(descriptionMarketing);
+} else if (userInput === "customer-service") {
+    console.log(descriptionCustomerService);
+} else if (userInput === "sales") {
+    console.log(descriptionSales);
+} else {
+    console.error('Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.');
+}
+

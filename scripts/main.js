@@ -132,25 +132,83 @@ console.log("Sales is een uitdagende afdeling om te werken als Verkoopmanager." 
 
 ////////        Opdracht 4        ////////
 
+// const descriptionCustomerService = departments['customer-service'].description;
+// const descriptionSales = departments.sales.description;
+// const preText01 = " is een leuke afdeling om te werken. Er werken op dit moment ";
+// const preText02 = " medewerkers.";
 
 const userInput = prompt('Over welke afdeling wil je meer informatie? Kies uit [marketing / sales / customer-service]');
 console.log(userInput);
 
-const descriptionCustomerService = departments['customer-service'].description;
-const descriptionSales = departments.sales.description;
 const departmentsSelection = ["marketing", "sales", "customer-service"];
-const preText01 = " is een leuke afdeling om te werken. Er werken op dit moment "
-const preText02 = " medewerkers."
-const preText03 ="Je koos "
-const preText04 = " Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in."
+
+const preText03 ="Je koos ";
+
+const preTextMarketing = " Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in.\n 0: "  + departments.marketing.jobs[0].title + "\n 1: " + departments.marketing.jobs[1].title + "\n 2: "  + departments.marketing.jobs[2].title + "\n 3: " + departments.marketing.jobs[3].title + "\n 4: " + departments.marketing.jobs[4].title ;
+
+const preTextSales = " Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in.\n 0: "  + departments.sales.jobs[0].title + "\n 1: " + departments.sales.jobs[1].title + "\n 2: "  + departments.sales.jobs[2].title + "\n 3: " + departments.sales.jobs[3].title ;
+
+const preTextCustomerService = " Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in.\n 0: "  + departments["customer-service"].jobs[0].title + "\n 1: " + departments["customer-service"].jobs[1].title + "\n 2: "  + departments["customer-service"].jobs[2].title + "\n 3: " + departments["customer-service"].jobs[3].title ;
+
 
 if (userInput === "marketing") {
-    console.log(departmentsSelection[0] + preText01 + departments.marketing.numberOfEmployees + preText02);
-// } else if (userInput === "customer-service") {
-//     console.log(departmentsSelection[2] + preText01 + departments['customer-service'].numberOfEmployees + preText02);
-// } else if (userInput === "sales") {
-//     console.log(departmentsSelection[1] + preText01 + departments.sales.numberOfEmployees+ preText02);
+    const userInput2 = prompt (preText03 + departmentsSelection[0] + preTextMarketing );
+    switch (userInput2){
+    case "0":
+        console.log( departments.marketing.jobs[0].title + "\n" + departments.marketing.jobs[0].description);
+        break;
+    case "1":
+        console.log(departments.marketing.jobs[1].title + "\n" + departments.marketing.jobs[1].description);
+        break;
+    case "2":
+        console.log(departments.marketing.jobs[2].title + "\n" + departments.marketing.jobs[2].description);
+        break;
+    case "3":
+        console.log(departments.marketing.jobs[3].title + "\n" + departments.marketing.jobs[3].description);
+        break;
+    case "4":
+        console.log(departments.marketing.jobs[4].title + "\n" + departments.marketing.jobs[4].description);
+        break;
+    default:
+        console.log("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.");
+    }
+
+} else if (userInput === "customer-service") {
+    const userInput2 = prompt (preText03 + departmentsSelection[2] + preTextCustomerService );
+    switch (userInput2){
+        case "0":
+            console.log( departments["customer-service"].jobs[0].title + "\n" + departments["customer-service"].jobs[0].description);
+            break;
+        case "1":
+            console.log(departments["customer-service"].jobs[1].title + "\n" + departments["customer-service"].jobs[1].description);
+            break;
+        case "2":
+            console.log(departments["customer-service"].jobs[2].title + "\n" + departments["customer-service"].jobs[2].description);
+            break;
+        case "3":
+            console.log(departments["customer-service"].jobs[3].title + "\n" + departments["customer-service"].jobs[3].description);
+            break;
+        default:
+            console.log("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.");
+    }
+} else if (userInput === "sales") {
+    const userInput2 = prompt (preText03 + departmentsSelection[1] + preTextSales );
+    switch (userInput2){
+        case "0":
+            console.log( departments.sales.jobs[0].title + "\n" + departments.sales.jobs[0].description);
+            break;
+        case "1":
+            console.log(departments.sales.jobs[1].title + "\n" + departments.sales.jobs[1].description);
+            break;
+        case "2":
+            console.log(departments.sales.jobs[2].title + "\n" + departments.sales.jobs[2].description);
+            break;
+        case "3":
+            console.log(departments.sales.jobs[3].title + "\n" + departments.sales.jobs[3].description);
+            break;
+        default:
+            console.log("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.");
+    }
 } else {
     console.error('Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.');
 }
-

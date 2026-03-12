@@ -195,20 +195,33 @@ if (userInput === "marketing") {
     const userInput2 = prompt (preText03 + departmentsSelection[1] + preTextSales );
     switch (userInput2){
         case "0":
-            console.log( departments.sales.jobs[0].title + "\n" + departments.sales.jobs[0].description);
+            // console.log( departments.sales.jobs[0].title + "\n" + departments.sales.jobs[0].description)
+            console.log(document.getElementById('role-title').textContent = departments.sales.jobs[0].title);
+            console.log(document.getElementById('department-description').textContent = departments.sales.description);
+            console.log(document.getElementById('role-description').textContent = departments.sales.jobs[0].description);
             break;
         case "1":
-            console.log(departments.sales.jobs[1].title + "\n" + departments.sales.jobs[1].description);
+            // console.log(departments.sales.jobs[1].title + "\n" + departments.sales.jobs[1].description);
+            console.log(document.getElementById('role-title').textContent = departments.sales.jobs[1].title);
+            console.log(document.getElementById('department-description').textContent = departments.sales.description);
+            console.log(document.getElementById('role-description').textContent = departments.sales.jobs[1].description);
             break;
         case "2":
-            console.log(departments.sales.jobs[2].title + "\n" + departments.sales.jobs[2].description);
+            // console.log(departments.sales.jobs[2].title + "\n" + departments.sales.jobs[2].description);
+            console.log(document.getElementById('role-title').textContent = departments.sales.jobs[2].title);
+            console.log(document.getElementById('department-description').textContent = departments.sales.description);
+            console.log(document.getElementById('role-description').textContent = departments.sales.jobs[2].description);
             break;
         case "3":
-            console.log(departments.sales.jobs[3].title + "\n" + departments.sales.jobs[3].description);
+            // console.log(departments.sales.jobs[3].title + "\n" + departments.sales.jobs[3].description);
+            console.log(document.getElementById('role-title').textContent = departments.sales.jobs[3].title);
+            console.log(document.getElementById('department-description').textContent = departments.sales.description);
+            console.log(document.getElementById('role-description').textContent = departments.sales.jobs[3].description);
             break;
         default:
-            console.log("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.");
+            console.log(document.getElementById('error-message').textContent = "Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.");
     }
 } else {
-    console.error('Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.');
+    console.error(document.getElementById('error-message').textContent = 'Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.');
 }
+// document.getElementById('role-title').textContent = "patrick";
